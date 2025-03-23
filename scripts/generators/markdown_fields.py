@@ -156,6 +156,7 @@ local_dir = path.dirname(path.abspath(__file__))
 TEMPLATE_DIR = path.join(local_dir, '../templates')
 template_loader = jinja2.FileSystemLoader(searchpath=TEMPLATE_DIR)
 template_env = jinja2.Environment(loader=template_loader,
+                                  autoescape=jinja2.select_autoescape(['html', 'xml', 'j2']),
                                   keep_trailing_newline=True,
                                   trim_blocks=True,
                                   lstrip_blocks=False)

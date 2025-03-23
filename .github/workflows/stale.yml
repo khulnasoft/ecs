@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   stale:
-    if: github.repository == 'elastic/ecs'
+    if: github.repository == 'khulnasoft/ecs'
 
     runs-on: ubuntu-latest
 
